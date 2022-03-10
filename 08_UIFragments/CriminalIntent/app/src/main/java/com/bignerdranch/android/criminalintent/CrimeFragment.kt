@@ -3,6 +3,7 @@ package com.bignerdranch.android.criminalintent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -75,6 +76,7 @@ class CrimeFragment : Fragment() {
         solvedCheckBox.apply {
             setOnCheckedChangeListener { _, isChecked ->
                 crime.isSolved = isChecked
+                Log.i("crime","crime:" + crime)
             }
         }
     }
